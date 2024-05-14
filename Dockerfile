@@ -1,8 +1,7 @@
 FROM python:3.11-slim
 
-# Set environment variable for server ID
-# Default value is 1, but can be changed during container startup
-ENV SERVER_ID=1
+# Set environment variables
+ENV ACTIVE_SERVERS="1 2 3"
 
 # Copy the requirements file into the container
 COPY requirements.txt /requirements.txt
@@ -16,5 +15,5 @@ COPY . /
 # Expose port 5000 for the Flask application
 EXPOSE 5000
 
-# Run the Flask application
+# Run the Flask application with a random server ID from the list of active servers
 CMD ["python", "server.py"]
