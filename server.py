@@ -49,6 +49,7 @@ active_servers = list(map(int, os.getenv('ACTIVE_SERVERS', '1 2 3').split()))
 num_slots = 512
 consistent_hash_map = ConsistentHashMap(len(active_servers), num_slots)
 
+
 @app.route("/home", methods=["GET"])
 def home():
     server_id = random.choice(active_servers)
