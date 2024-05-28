@@ -3,11 +3,11 @@
 # IMPLEMENTING A LOAD BALANCER 
 
 ## Quick Links
-- [Introduction]()
+- [Introduction](https://github.com/tkxwaweru/load_balancer?tab=readme-ov-file#introduction)
 
-- [Running the project]()
+- [Running the project](https://github.com/tkxwaweru/load_balancer?tab=readme-ov-file#running-the-project)
 
-- [Analysis]()
+- [Analysis](https://github.com/tkxwaweru/load_balancer?tab=readme-ov-file#analysis)
 
 ## Introduction
 This project deals with the implementation of a load balancer that is meant to divide a load of requests among N server replicas (for instance N = 3 replicas). The purpose of the load balancer is to prevent overwhelming a single server with a large number of requests which could lead to slow server responses and probable server failure.
