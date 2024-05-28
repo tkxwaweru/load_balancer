@@ -1,0 +1,2 @@
+This directory contains batch files used to send asynchronous requests 
+to the load balancer for distribution among servers.
