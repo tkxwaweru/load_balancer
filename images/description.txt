@@ -1,0 +1,1 @@
+This directory contains images that were used during testing of the system.
