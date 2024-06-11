@@ -1,3 +1,9 @@
+"""
+Server.py:
+
+Responsible for initializing the servers using the flask python library
+"""
+
 import os
 from flask import Flask, jsonify, request
 from consistent_hash_map import ConsistentHashMap
@@ -10,6 +16,7 @@ server_id = int(os.getenv("SERVER_ID", "1"))
 num_slots = 512
 
 
+# /home endpoint
 @app.route("/home", methods=["GET"])
 def home():
     return (
@@ -18,6 +25,7 @@ def home():
     )
 
 
+# heartbeat endpoint
 @app.route("/heartbeat", methods=["GET"])
 def heartbeat():
     return "", 200

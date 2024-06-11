@@ -1,3 +1,9 @@
+"""
+load_balancer.py
+
+Responsible for implementing the load balancers functionalities and endpoints
+"""
+
 import os
 import requests
 from consistent_hash_map import ConsistentHashMap
@@ -13,6 +19,8 @@ consistent_hash_map = ConsistentHashMap(len(active_servers), num_slots)
 # Dictionary to store requests mapped to servers
 requests_mapping = {server: [] for server in active_servers}
 
+
+# /rep endpoint - display active replicas
 @app.route("/rep", methods=["GET"])
 def get_replicas():
     return (
@@ -25,6 +33,8 @@ def get_replicas():
         200,
     )
 
+
+# /add endpoint - add a server replica
 @app.route("/add", methods=["POST"])
 def add_server():
     data = request.json
@@ -68,6 +78,8 @@ def add_server():
         200,
     )
 
+
+# /rm endpoint - remove a replica
 @app.route("/rm", methods=["DELETE"])
 def remove_server():
     data = request.json
@@ -99,6 +111,7 @@ def remove_server():
         200,
     )
 
+
 @app.route("/<path:path>", methods=["GET"])
 def route_request(path):
     server_id = consistent_hash_map.get_server(path)
@@ -111,6 +124,7 @@ def route_request(path):
             jsonify({"message": f"<Error> {str(e)}", "status": "failure"}),
             500,
         )
+
 
 @app.route("/requests/<string:server_id>", methods=["GET"])
 def get_requests_mapped_to_server(server_id):
@@ -131,6 +145,8 @@ def get_requests_mapped_to_server(server_id):
             404,
         )
 
+
+# /request endpoint
 @app.route("/request", methods=["GET"])
 def handle_request():
     request_id = int(request.args.get("request_id"))
@@ -161,6 +177,7 @@ def handle_request():
             jsonify({"message": f"<Error> {str(e)}", "status": "failure"}),
             500,
         )
+
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
