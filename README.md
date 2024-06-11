@@ -2,6 +2,13 @@
 
 # IMPLEMENTING A LOAD BALANCER 
 
+## ICS 4B
+### Group Members:
+1. 137931 Trevor Waweru 
+2. 140801 Kyla Arunga
+3. 138551 Ruweida Ismail
+4. 145644 Fardowsa Hassan
+
 ## Quick Links
 - [Introduction](https://github.com/tkxwaweru/load_balancer?tab=readme-ov-file#introduction)
 
