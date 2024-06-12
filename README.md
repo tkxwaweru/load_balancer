@@ -19,7 +19,7 @@
 ## Introduction
 This project deals with the implementation of a load balancer that is meant to divide a load of requests among N server replicas (for instance N = 3 replicas). The purpose of the load balancer is to prevent overwhelming a single server with a large number of requests which could lead to slow server responses and probable server failure.
 
-The system is capable of adding server replicas into the environment to increase the number servers the load balancer has to work with in terms of laod distribution. The system utilizes consistent hashing and quadratic probing to guide the load distribution algorithm. 
+The system is capable of adding server replicas into the environment to increase the number servers the load balancer has to work with in terms of load distribution. The system utilizes consistent hashing and quadratic probing to guide the load distribution algorithm. 
 
 ## Running the project
 ### 1. Requirements:
@@ -46,7 +46,7 @@ The system is capable of adding server replicas into the environment to increase
   ```{code}
   docker-compose logs
   ```
-4. The system makes use of batch files to ease certain operations within the system. They shall be discussed in the analysis section.
+4. The system makes use of batch files (.bat) to ease certain operations within the system. They shall be discussed in the analysis section.
 ## Analysis
 
 ### Test 1: Request handling on N = 3 server containers
