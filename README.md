@@ -36,7 +36,7 @@ The system is capable of adding server replicas into the environment to increase
 
 1. Clone this repository into your machine 
   ```{code}
-  C:\Users\user>git clone https://github.com/tkxwaweru/load_balancer.git load_balancer
+  git clone https://github.com/tkxwaweru/load_balancer.git load_balancer
   ```
 2. Build the server containers:
   ```{code}
