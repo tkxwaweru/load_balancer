@@ -471,3 +471,6 @@ Finally, modify the hash functions H(i), Φ(i, j) and report the observations fr
 For this case, the load balancer has demonstrated efficiency in load distribution. 
 
 It is capable of nearly evenly distributing load among available server replicas and can continue doing so as the number of replicas increase thus also demonstarting scalability. As such the hashing algorithm need not be modified.
+
+## Conclusion
+The load balancer developed has proven successful. It is capable of close to evenly distributing load across available active server replicas. This can be observed in the analysis section. Moreover, the system is capable of managing it's active server replicas through processes such as adding replicas, removing replicas and routing requests to available replicas using a consistent hashing algorithm.
