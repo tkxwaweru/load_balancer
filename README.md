@@ -34,19 +34,23 @@ The system is capable of adding server replicas into the environment to increase
 
 <b>Disclaimer</b>: Modify the commands appropriately for your case.
 
-1. Build the server containers:
+1. Clone this repository into your machine 
+  ```{code}
+  C:\Users\user>git clone https://github.com/tkxwaweru/load_balancer.git load_balancer
+  ```
+2. Build the server containers:
   ```{code}
   docker-compose build
   ```
-2. Run the containers in the background:
+3. Run the containers in the background:
   ```{code}
   docker-compose up -d
   ```
-3. View the logs (you can also monitor the logs via docker desktop):
+4. View the logs (you can also monitor the logs via docker desktop):
   ```{code}
   docker-compose logs
   ```
-4. The system makes use of batch files (.bat) to ease certain operations within the system. They shall be discussed in the analysis section.
+5. The system makes use of batch files (.bat) to ease certain operations within the system. They shall be discussed in the analysis section.
 ## Analysis
 
 ### Test 1: Request handling on N = 3 server containers
